@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const MediaContent = styled.div`
-  height: 382px;
-`;
+const MediaContent = styled.div``;
 
 export default MediaContent;
