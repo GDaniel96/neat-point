@@ -20,61 +20,56 @@ const Wrapper = styled.div`
   }
 `;
 
-const CustomContainer = styled(Container)`
-  margin-left: 0;
-`;
-
-const CustomRow = styled(Row)`
-  flex-direction: column;
+const TextWrapper = styled.div`
+  height: 100%;
+  display: flex;
   align-items: center;
-  @media only screen and (${screens.md}) {
-    flex-direction: row;
-  }
-`;
-
-const CustomColumn = styled(Col)`
-  padding-left: 0;
 `;
 
 const Image = styled.img`
   width: 100%;
+  @media only screen and (${screens.md}) {
+    margin-left: -12px;
+  }
 `;
 
 const HomePage = () => {
   return (
-    <Wrapper>
-      <CustomContainer>
+    <Container fluid>
+      <Wrapper>
         <BlockContent>
-          <CustomRow>
-            <CustomColumn lg={7}>
+          <Row>
+            <Col lg={7}>
               <MediaContent>
                 <Image
                   src="/homePage/homePage-mobile.png"
                   alt="home-page-image"
                 />
               </MediaContent>
-            </CustomColumn>
-            {/* <Col lg={1} /> */}
-            <Col lg={5}>
-              <TextContent>
-                <BlockHeader>
-                  Servicii profesionale de curățenie adaptate la nevoile tale
-                </BlockHeader>
-                <BlockParagraph>
-                  Neat Point oferă servicii profesionale de curățenie în regim
-                  hotelier, cât și la domiciliu, în Județul Brașov.
-                  Profesionalismul de care am dat dovadă în cei patru ani de
-                  activitate, reflectă încrederea pe care clienții noștri ne-o
-                  oferă, datorită promptitudinii și eficienței lucrului bine
-                  făcut.
-                </BlockParagraph>
-                <Button>Contactează-ne</Button>
-              </TextContent>
             </Col>
-          </CustomRow>
+
+            <Col lg={5}>
+              <TextWrapper>
+                <TextContent>
+                  <BlockHeader>
+                    Servicii profesionale de curățenie adaptate la nevoile tale
+                  </BlockHeader>
+                  <BlockParagraph>
+                    Neat Point oferă servicii profesionale de curățenie în regim
+                    hotelier, cât și la domiciliu, în Județul Brașov.
+                    Profesionalismul de care am dat dovadă în cei patru ani de
+                    activitate, reflectă încrederea pe care clienții noștri ne-o
+                    oferă, datorită promptitudinii și eficienței lucrului bine
+                    făcut.
+                  </BlockParagraph>
+                  <Button>Contactează-ne</Button>
+                </TextContent>
+              </TextWrapper>
+            </Col>
+          </Row>
         </BlockContent>
-      </CustomContainer>
-    </Wrapper>
+      </Wrapper>
+    </Container>
   );
 };
 

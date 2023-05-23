@@ -22,22 +22,28 @@ const ListWrapper = styled.ul`
 `;
 
 const MenuItem = styled.li`
+  position: relative;
   font-family: "Roboto";
   font-size: 20px;
   list-style-type: none;
   height: 40px;
-`;
-
-const LineThrough = styled.div`
-  position: relative;
-  bottom: 10px;
-  width: 100%;
-  height: 10px;
-  background-color: #fcef6d;
-  opacity: 0.7;
-  z-index: -1;
-  ${MenuItem}:hover & {
-    height: 20px;
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 18px;
+    width: 100%;
+    height: 10px;
+    background-color: #fcef6d;
+    opacity: 0.7;
+    z-index: -1;
+    transition: 0.2s height ease-in-out;
+  }
+  &:hover {
+    &:after {
+      height: 20px;
+      bottom: 3px;
+    }
   }
 `;
 
@@ -54,20 +60,9 @@ const Header = () => {
         <Col lg={3} />
         <Col lg={5}>
           <ListWrapper>
-            <MenuItem>
-              Despre noi
-              <LineThrough />
-            </MenuItem>
-
-            <MenuItem>
-              Servicii
-              <LineThrough />
-            </MenuItem>
-
-            <MenuItem>
-              Contact
-              <LineThrough />
-            </MenuItem>
+            <MenuItem>Despre noi</MenuItem>
+            <MenuItem>Servicii</MenuItem>
+            <MenuItem>Contact</MenuItem>
           </ListWrapper>
         </Col>
       </Row>
