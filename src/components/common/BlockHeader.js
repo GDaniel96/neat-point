@@ -7,9 +7,9 @@ const BlockHeader = styled.h2`
   font-family: "Roboto";
   font-size: 25px;
   font-weight: bold;
-  /* @media only screen and (${screens.md}) {
-    text-align: start;
-  } */
+  @media only screen and (${screens.md}) {
+    padding: 0 0 25px 0;
+  }
 `;
 
 export default BlockHeader;

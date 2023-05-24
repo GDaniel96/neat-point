@@ -37,6 +37,7 @@ const Services = () => {
             <Service
               header="Scări de bloc"
               source="/services/scari-de-bloc-2x.png"
+              flipped={true}
             >
               <ServiceItem>Măturat în fața scării</ServiceItem>
               <ServiceItem>
@@ -51,6 +52,7 @@ const Services = () => {
             <Service
               header="Curățenie de întreținere"
               source="/services/curatenie-de-intretinere-2x.png"
+              flipped={false}
             >
               <ServiceItem>Aerisirea apartamentului</ServiceItem>
               <ServiceItem>
@@ -75,6 +77,7 @@ const Services = () => {
             <Service
               header="Curatenie regim hotelier"
               source="/services/regim-hotelier-2x.png"
+              flipped={true}
             >
               <ServiceItem>Aerisirea apartamentului</ServiceItem>
               <ServiceItem>Verificarea termostatului</ServiceItem>
@@ -101,6 +104,7 @@ const Services = () => {
             <Service
               header="Curățenie Generală"
               source="/services/curatenie-generala-2x.png"
+              flipped={false}
             >
               <ServiceItem>
                 Îndepărtarea prafului și a pânzelor de păianjeni
