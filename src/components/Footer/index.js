@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Container, Row, Col, Media } from "reactstrap";
 import BlockContent from "../common/BlockContent";
 import MediaContent from "../common/MediaContent";
+import screens from "../Layout/mediaQueries";
 
 const Wrapper = styled.div`
   background-color: #6fabf8;
@@ -9,10 +10,17 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (${screens.md}) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 const Logo = styled.img`
   height: 79px;
+  @media only screen and (${screens.md}) {
+    height: 134px;
+  }
 `;
 
 const Image = styled.img``;
@@ -59,24 +67,37 @@ const LegalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  @media only screen and (${screens.md}) {
+    margin-top: 30px;
+  }
 `;
 
 const LegalImage = styled.img`
   width: 100%;
 `;
 
+const CopyRightsWrapper = styled.div`
+  @media only screen and (${screens.md}) {
+    display: flex;
+    align-items: center;
+    margin-left: -300px;
+  }
+`;
+
 const Footer = () => {
   return (
-    <Container>
+    <Container fluid>
       <BlockContent>
         <Row>
           <Wrapper>
-            <Col>
+            <Col lg={1} />
+            <Col lg={2}>
               <MediaContent>
                 <Logo src="/footer/logo-white.png" alt="logo" />
               </MediaContent>
             </Col>
-            <Col>
+
+            <Col lg={2}>
               <SectionWrapper>
                 <FooterHeading>Despre noi</FooterHeading>
                 <IconsWrapper>
@@ -89,7 +110,8 @@ const Footer = () => {
                 </IconsWrapper>
               </SectionWrapper>
             </Col>
-            <Col>
+            <Col lg={1} />
+            <Col lg={2}>
               <SectionWrapper>
                 <FooterHeading>Servicii de curățenie</FooterHeading>
                 <ParagraphWrapper>
@@ -100,7 +122,8 @@ const Footer = () => {
                 </ParagraphWrapper>
               </SectionWrapper>
             </Col>
-            <Col>
+            <Col lg={1} />
+            <Col lg={2}>
               <SectionWrapper>
                 <FooterHeading>Contact</FooterHeading>
                 <ParagraphWrapper>
@@ -112,10 +135,13 @@ const Footer = () => {
                   <LegalImage src="/footer/solutionarea-alternativa-a-litigiilor.svg" />
                 </LegalWrapper>
               </SectionWrapper>
-              <ParagraphWrapper>
-                <FooterParagraph>© NeatPoint/ Brașov/ 2023</FooterParagraph>
-              </ParagraphWrapper>
+              <CopyRightsWrapper>
+                <ParagraphWrapper>
+                  <FooterParagraph>© NeatPoint/ Brașov/ 2023</FooterParagraph>
+                </ParagraphWrapper>
+              </CopyRightsWrapper>
             </Col>
+            <Col lg={1} />
           </Wrapper>
         </Row>
       </BlockContent>
