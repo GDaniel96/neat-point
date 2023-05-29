@@ -29,7 +29,7 @@ const TextWrapper = styled.div`
 const Image = styled.img`
   width: 100%;
   @media only screen and (${screens.md}) {
-    margin-left: -12px;
+    margin-left: -30px;
   }
 `;
 
