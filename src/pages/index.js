@@ -3,6 +3,7 @@ import Layout from "@/components/Layout/Layout";
 import Header from "@/components/Header";
 import HomePage from "../components/HomePage";
 import Services from "../components/Services";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
           <Header />
           <HomePage />
           <Services />
+          <Contact />
         </Layout>
       </main>
     </>
