@@ -44,9 +44,9 @@ const BlockHomeHeader = styled.h2`
   }
 `;
 
-const HomePage = () => {
+const About = () => {
   return (
-    <Container fluid>
+    <Container fluid id="about">
       <Wrapper>
         <BlockContent>
           <Row>
@@ -84,4 +84,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default About;

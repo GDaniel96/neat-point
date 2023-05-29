@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Layout from "../components/Layout/Layout";
 import Header from "../components/Header";
-import HomePage from "../components/HomePage";
+import About from "../components/About";
 import Footer from "../components/Footer";
 import Services from "../components/Services";
 import Contact from "../components/Contact";
@@ -17,7 +17,7 @@ export default function Home() {
       <main>
         <Layout>
           <Header />
-          <HomePage />
+          <About />
           <Services />
           <Contact />
           <Footer />

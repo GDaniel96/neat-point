@@ -3,6 +3,7 @@ import { Container, Row, Col, Media } from "reactstrap";
 import BlockContent from "../common/BlockContent";
 import MediaContent from "../common/MediaContent";
 import screens from "../Layout/mediaQueries";
+import Link from "../common/Link";
 
 const Wrapper = styled.div`
   background-color: #6fabf8;
@@ -110,10 +111,22 @@ const Footer = () => {
                 <SectionWrapper>
                   <FooterHeading>Servicii de curățenie</FooterHeading>
                   <ParagraphWrapper>
-                    <FooterParagraph>Scări de bloc</FooterParagraph>
-                    <FooterParagraph>Curățenie de întreținere</FooterParagraph>
-                    <FooterParagraph>Curățenie regim hotelier</FooterParagraph>
-                    <FooterParagraph>Curățenie Generală</FooterParagraph>
+                    <Link href="#scari-de-bloc">
+                      <FooterParagraph>Scări de bloc</FooterParagraph>
+                    </Link>
+                    <Link href="#curatenie-de-intretinere">
+                      <FooterParagraph>
+                        Curățenie de întreținere
+                      </FooterParagraph>
+                    </Link>
+                    <Link href="#curatenie-regim-hotelier">
+                      <FooterParagraph>
+                        Curățenie regim hotelier
+                      </FooterParagraph>
+                    </Link>
+                    <Link href="#curatenie-generala">
+                      <FooterParagraph>Curățenie Generală</FooterParagraph>
+                    </Link>
                   </ParagraphWrapper>
                 </SectionWrapper>
               </Col>

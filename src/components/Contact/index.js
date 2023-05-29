@@ -24,7 +24,7 @@ const TextWrapper = styled.div`
 
 const Contact = () => {
   return (
-    <Container>
+    <Container id="contact">
       <BlockContent>
         <Row>
           <Col lg={2} />

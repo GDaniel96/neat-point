@@ -36,9 +36,9 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Service = ({ header, source, children, flipped }) => {
+const Service = ({ header, source, children, flipped, id }) => {
   return (
-    <Wrapper>
+    <Wrapper id={id}>
       <Row>
         <CardContainer flipped={flipped}>
           <Col lg={6}>

@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Col, Row, Container } from "reactstrap";
+import Link from "../common/Link";
 
 const LogoWrapper = styled.div`
   height: 93px;
@@ -60,9 +61,15 @@ const Header = () => {
         <Col lg={3} />
         <Col lg={5}>
           <ListWrapper>
-            <MenuItem>Despre noi</MenuItem>
-            <MenuItem>Servicii</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <Link href="#about">
+              <MenuItem>Despre noi</MenuItem>
+            </Link>
+            <Link href="#services">
+              <MenuItem>Servicii</MenuItem>
+            </Link>
+            <Link href="#contact">
+              <MenuItem>Contact</MenuItem>
+            </Link>
           </ListWrapper>
         </Col>
       </Row>

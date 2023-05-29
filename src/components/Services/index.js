@@ -6,7 +6,6 @@ import styled from "styled-components";
 import screens from "../Layout/mediaQueries";
 
 const ServiceItem = styled.li`
-  font-family: "Roboto";
   list-style-type: none;
   font-weight: 300;
   font-size: 15px;
@@ -17,7 +16,7 @@ const ServiceItem = styled.li`
 
 const Services = () => {
   return (
-    <Container>
+    <Container id="services">
       <BlockContent>
         <Row>
           <Col lg={1} />
@@ -36,6 +35,7 @@ const Services = () => {
               header="Scări de bloc"
               source="/services/scari-de-bloc-2x.png"
               flipped={true}
+              id="scari-de-bloc"
             >
               <ServiceItem>Măturat în fața scării</ServiceItem>
               <ServiceItem>
@@ -51,6 +51,7 @@ const Services = () => {
               header="Curățenie de întreținere"
               source="/services/curatenie-de-intretinere-2x.png"
               flipped={false}
+              id="curatenie-de-intretinere"
             >
               <ServiceItem>Aerisirea apartamentului</ServiceItem>
               <ServiceItem>
@@ -76,6 +77,7 @@ const Services = () => {
               header="Curatenie regim hotelier"
               source="/services/regim-hotelier-2x.png"
               flipped={true}
+              id="curatenie-regim-hotelier"
             >
               <ServiceItem>Aerisirea apartamentului</ServiceItem>
               <ServiceItem>Verificarea termostatului</ServiceItem>
@@ -103,6 +105,7 @@ const Services = () => {
               header="Curățenie Generală"
               source="/services/curatenie-generala-2x.png"
               flipped={false}
+              id="curatenie-generala"
             >
               <ServiceItem>
                 Îndepărtarea prafului și a pânzelor de păianjeni
