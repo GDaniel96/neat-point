@@ -15,8 +15,6 @@ const ServiceItem = styled.li`
   }
 `;
 
-//TODO: Pending reversing some container's flex
-
 const Services = () => {
   return (
     <Container>

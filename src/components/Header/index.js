@@ -23,10 +23,10 @@ const ListWrapper = styled.ul`
 
 const MenuItem = styled.li`
   position: relative;
-  font-family: "Roboto";
   font-size: 20px;
   list-style-type: none;
   height: 40px;
+  font-weight: bold;
   &:after {
     display: block;
     content: "";

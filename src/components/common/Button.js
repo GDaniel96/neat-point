@@ -8,6 +8,11 @@ const Button = styled.button`
   border: none;
   padding: 10px 25px;
   margin: 45px 0px;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+  &:disabled {
+    opacity: 0.6;
+  }
 `;
 
 export default Button;

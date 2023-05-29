@@ -7,13 +7,9 @@ import screens from "../Layout/mediaQueries";
 const Wrapper = styled.div`
   background-color: #6fabf8;
   color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @media only screen and (${screens.md}) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+  margin: 0 -12px;
+  padding-bottom: 46px;
+  border-radius: 35% 35% 0 0;
 `;
 
 const Logo = styled.img`
@@ -23,11 +19,19 @@ const Logo = styled.img`
   }
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  height: 31px;
+`;
 
 const SectionWrapper = styled.div`
-  width: 230px;
-  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 0;
+  @media only screen and (${screens.md}) {
+    align-items: flex-start;
+    padding: 40px 0;
+  }
 `;
 
 const FooterHeading = styled.h6`
@@ -46,6 +50,9 @@ const ParagraphWrapper = styled.div`
   align-items: center;
   gap: 15px;
   padding-top: 25px;
+  @media only screen and (${screens.md}) {
+    align-items: flex-start;
+  }
 `;
 
 const FooterParagraph = styled.p`
@@ -57,93 +64,87 @@ const FooterParagraph = styled.p`
 
 const IconsWrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   gap: 20px;
-  height: 38px;
+  max-width: 230px;
 `;
 
 const LegalWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
-  @media only screen and (${screens.md}) {
-    margin-top: 30px;
-  }
 `;
 
 const LegalImage = styled.img`
   width: 100%;
 `;
 
-const CopyRightsWrapper = styled.div`
-  @media only screen and (${screens.md}) {
-    display: flex;
-    align-items: center;
-    margin-left: -300px;
-  }
-`;
-
 const Footer = () => {
   return (
     <Container fluid>
       <BlockContent>
-        <Row>
-          <Wrapper>
-            <Col lg={1} />
-            <Col lg={2}>
-              <MediaContent>
-                <Logo src="/footer/logo-white.png" alt="logo" />
-              </MediaContent>
-            </Col>
+        <Wrapper>
+          <Container>
+            <Row>
+              <Col sm={12} lg={3}>
+                <MediaContent>
+                  <Logo src="/footer/logo-white.png" alt="logo" />
+                </MediaContent>
+              </Col>
 
-            <Col lg={2}>
-              <SectionWrapper>
-                <FooterHeading>Despre noi</FooterHeading>
-                <IconsWrapper>
-                  <Image src="/footer/mail@2x.png" alt="mail" />
-                  <Image
-                    src="/footer/facebook-app-symbol@2x.png"
-                    alt="facebook"
-                  />
-                  <Image src="/footer/whatsapp@2x.png" alt="whatsapp" />
-                </IconsWrapper>
-              </SectionWrapper>
-            </Col>
-            <Col lg={1} />
-            <Col lg={2}>
-              <SectionWrapper>
-                <FooterHeading>Servicii de curățenie</FooterHeading>
+              <Col sm={12} lg={2}>
+                <SectionWrapper>
+                  <FooterHeading>Despre noi</FooterHeading>
+                  <IconsWrapper>
+                    <Image src="/footer/mail@2x.png" alt="mail" />
+                    <Image
+                      src="/footer/facebook-app-symbol@2x.png"
+                      alt="facebook"
+                    />
+                    <Image src="/footer/whatsapp@2x.png" alt="whatsapp" />
+                  </IconsWrapper>
+                </SectionWrapper>
+              </Col>
+              <Col lg={1} />
+              <Col lg={3}>
+                <SectionWrapper>
+                  <FooterHeading>Servicii de curățenie</FooterHeading>
+                  <ParagraphWrapper>
+                    <FooterParagraph>Scări de bloc</FooterParagraph>
+                    <FooterParagraph>Curățenie de întreținere</FooterParagraph>
+                    <FooterParagraph>Curățenie regim hotelier</FooterParagraph>
+                    <FooterParagraph>Curățenie Generală</FooterParagraph>
+                  </ParagraphWrapper>
+                </SectionWrapper>
+              </Col>
+              <Col lg={1} />
+              <Col lg={2}>
+                <SectionWrapper>
+                  <FooterHeading>Contact</FooterHeading>
+                  <ParagraphWrapper>
+                    <FooterParagraph>0758460513</FooterParagraph>
+                    <FooterParagraph>neatpoint18@gmail.com</FooterParagraph>
+                  </ParagraphWrapper>
+                </SectionWrapper>
+              </Col>
+            </Row>
+            <Row>
+              <Col lg={6} />
+              <Col lg={3}>
                 <ParagraphWrapper>
-                  <FooterParagraph>Scări de bloc</FooterParagraph>
-                  <FooterParagraph>Curățenie de întreținere</FooterParagraph>
-                  <FooterParagraph>Curățenie regim hotelier</FooterParagraph>
-                  <FooterParagraph>Curățenie Generală</FooterParagraph>
+                  <FooterParagraph>© NeatPoint/ Brașov/ 2023</FooterParagraph>
                 </ParagraphWrapper>
-              </SectionWrapper>
-            </Col>
-            <Col lg={1} />
-            <Col lg={2}>
-              <SectionWrapper>
-                <FooterHeading>Contact</FooterHeading>
-                <ParagraphWrapper>
-                  <FooterParagraph>0758460513</FooterParagraph>
-                  <FooterParagraph>neatpoint18@gmail.com</FooterParagraph>
-                </ParagraphWrapper>
+              </Col>
+              <Col lg={1} />
+              <Col lg={2}>
                 <LegalWrapper>
                   <LegalImage src="/footer/litigii.png" />
                   <LegalImage src="/footer/solutionarea-alternativa-a-litigiilor.svg" />
                 </LegalWrapper>
-              </SectionWrapper>
-              <CopyRightsWrapper>
-                <ParagraphWrapper>
-                  <FooterParagraph>© NeatPoint/ Brașov/ 2023</FooterParagraph>
-                </ParagraphWrapper>
-              </CopyRightsWrapper>
-            </Col>
-            <Col lg={1} />
-          </Wrapper>
-        </Row>
+              </Col>
+            </Row>
+          </Container>
+        </Wrapper>
       </BlockContent>
     </Container>
   );

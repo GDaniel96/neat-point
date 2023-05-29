@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
 import Button from "../common/Button";
@@ -30,11 +30,13 @@ const TextArea = styled.textarea`
 `;
 
 const Form = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const formRef = useRef();
 
   const submitForm = (e) => {
     e.preventDefault();
-
+    setIsLoading(true);
     emailjs
       .sendForm(
         process.env.SERVICE_ID,
@@ -47,25 +49,41 @@ const Form = () => {
         alert(
           "Vă mulțumim pentru că ați intrat în contact cu noi, vom reveni la dumneavoastră în cel mai scurt timp!"
         );
+        e.target.reset();
+        setIsLoading(false);
       })
       .catch((error) => {
         console.log(error.text);
       });
-
-    e.target.reset();
   };
 
   return (
     <FormContainer onSubmit={submitForm} ref={formRef}>
-      <Input type="text" placeholder="Nume" name="user_name"></Input>
-      <Input type="email" placeholder="E-mail" name="user_email"></Input>
+      <Input
+        type="text"
+        placeholder="Nume"
+        name="user_name"
+        disabled={isLoading}
+      />
+      <Input
+        type="email"
+        placeholder="E-mail"
+        name="user_email"
+        disabled={isLoading}
+      />
       <Input
         type="number"
         placeholder="Număr de telefon"
         name="user_phone"
-      ></Input>
-      <TextArea placeholder="Mesaj" rows={10} name="message"></TextArea>
-      <Button>Trimite</Button>
+        disabled={isLoading}
+      />
+      <TextArea
+        placeholder="Mesaj"
+        rows={10}
+        name="message"
+        disabled={isLoading}
+      ></TextArea>
+      <Button disabled={isLoading}>Trimite</Button>
     </FormContainer>
   );
 };

@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding-bottom: 40px; */
   @media only screen and (${screens.md}) {
     align-items: start;
     padding-bottom: 100px;
