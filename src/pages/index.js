@@ -2,6 +2,7 @@ import Head from "next/head";
 import Layout from "@/components/Layout/Layout";
 import Header from "@/components/Header";
 import HomePage from "../components/HomePage";
+import Services from "../components/Services";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Layout>
           <Header />
           <HomePage />
+          <Services />
         </Layout>
       </main>
     </>

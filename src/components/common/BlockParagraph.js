@@ -8,6 +8,7 @@ const BlockParagraph = styled.p`
   font-size: 15px;
   @media only screen and (${screens.md}) {
     text-align: start;
+    font-size: 18px;
   }
 `;
 
