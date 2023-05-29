@@ -7,6 +7,7 @@ import BlockParagraph from "../common/BlockParagraph";
 import TextContent from "../common/TextContent";
 import Button from "../common/Button";
 import screens from "../Layout/mediaQueries";
+import Link from "../common/Link";
 
 const Wrapper = styled.div`
   background-image: url("/homePage/backgroundImage.svg");
@@ -73,7 +74,9 @@ const About = () => {
                     oferă, datorită promptitudinii și eficienței lucrului bine
                     făcut.
                   </BlockParagraph>
-                  <Button>Contactează-ne</Button>
+                  <Link href="#contact">
+                    <Button>Contactează-ne</Button>
+                  </Link>
                 </TextContent>
               </TextWrapper>
             </Col>

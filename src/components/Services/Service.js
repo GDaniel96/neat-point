@@ -5,6 +5,7 @@ import BlockHeader from "../common/BlockHeader";
 import TextContent from "../common/TextContent";
 import Button from "../common/Button";
 import screens from "../Layout/mediaQueries";
+import Link from "../common/Link";
 
 const Wrapper = styled.div`
   display: flex;
@@ -51,7 +52,9 @@ const Service = ({ header, source, children, flipped, id }) => {
             <TextContent>
               <BlockHeader>{header}</BlockHeader>
               <ListWrapper>{children}</ListWrapper>
-              <Button>Cere Oferta</Button>
+              <Link href="#contact">
+                <Button>Cere Oferta</Button>
+              </Link>
             </TextContent>
           </Col>
         </CardContainer>

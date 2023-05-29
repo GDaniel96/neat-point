@@ -64,24 +64,28 @@ const Form = () => {
         placeholder="Nume"
         name="user_name"
         disabled={isLoading}
+        required
       />
       <Input
         type="email"
         placeholder="E-mail"
         name="user_email"
         disabled={isLoading}
+        required
       />
       <Input
         type="number"
         placeholder="Număr de telefon"
         name="user_phone"
         disabled={isLoading}
+        required
       />
       <TextArea
         placeholder="Mesaj"
         rows={10}
         name="message"
         disabled={isLoading}
+        required
       ></TextArea>
       <Button disabled={isLoading}>Trimite</Button>
     </FormContainer>
