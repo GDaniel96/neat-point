@@ -5,8 +5,14 @@ import MediaContent from "../common/MediaContent";
 import screens from "../Layout/mediaQueries";
 import Link from "../common/Link";
 
+const BackgroundContainer = styled.div`
+  background-image: url("./footer/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+`;
+
 const Wrapper = styled.div`
-  background-color: #6fabf8;
   color: #ffffff;
   margin: 0 -12px;
   padding-bottom: 46px;
@@ -18,10 +24,6 @@ const Logo = styled.img`
   @media only screen and (${screens.md}) {
     height: 134px;
   }
-`;
-
-const Image = styled.img`
-  height: 31px;
 `;
 
 const SectionWrapper = styled.div`
@@ -63,103 +65,103 @@ const FooterParagraph = styled.p`
   font-size: 18px;
 `;
 
-const IconsWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  max-width: 230px;
+const CopyrightWrapper = styled.div`
+  padding-top: 65px;
 `;
 
 const LegalWrapper = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 15px;
+
+  @media only screen and (${screens.md}) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
 `;
 
 const LegalImage = styled.img`
-  width: 100%;
+  width: 50%;
+
+  @media only screen and (${screens.md}) {
+    width: 100%;
+  }
 `;
 
 const Footer = () => {
   return (
-    <Container fluid>
-      <BlockContent>
-        <Wrapper>
-          <Container>
-            <Row>
-              <Col sm={12} lg={3}>
-                <MediaContent>
-                  <Logo src="/footer/logo-white.png" alt="logo" />
-                </MediaContent>
-              </Col>
-
-              <Col sm={12} lg={2}>
-                <SectionWrapper>
-                  <FooterHeading>Despre noi</FooterHeading>
-                  <IconsWrapper>
-                    <Image src="/footer/mail@2x.png" alt="mail" />
-                    <Image
-                      src="/footer/facebook-app-symbol@2x.png"
-                      alt="facebook"
-                    />
-                    <Image src="/footer/whatsapp@2x.png" alt="whatsapp" />
-                  </IconsWrapper>
-                </SectionWrapper>
-              </Col>
-              <Col lg={1} />
-              <Col lg={3}>
-                <SectionWrapper>
-                  <FooterHeading>Servicii de curățenie</FooterHeading>
-                  <ParagraphWrapper>
-                    <Link href="#scari-de-bloc">
-                      <FooterParagraph>Scări de bloc</FooterParagraph>
-                    </Link>
-                    <Link href="#curatenie-de-intretinere">
+    <BackgroundContainer>
+      <Container fluid>
+        <BlockContent>
+          <Wrapper>
+            <Container>
+              <Row>
+                <Col sm={12} lg={4}>
+                  <MediaContent>
+                    <Logo src="/footer/logo-white.png" alt="logo" />
+                  </MediaContent>
+                </Col>
+                <Col lg={1} />
+                <Col lg={3}>
+                  <SectionWrapper>
+                    <FooterHeading>Servicii de curățenie</FooterHeading>
+                    <ParagraphWrapper>
+                      <Link href="#scari-de-bloc">
+                        <FooterParagraph>Scări de bloc</FooterParagraph>
+                      </Link>
+                      <Link href="#curatenie-de-intretinere">
+                        <FooterParagraph>
+                          Curățenie de întreținere
+                        </FooterParagraph>
+                      </Link>
+                      <Link href="#curatenie-regim-hotelier">
+                        <FooterParagraph>
+                          Curățenie regim hotelier
+                        </FooterParagraph>
+                      </Link>
+                      <Link href="#curatenie-generala">
+                        <FooterParagraph>Curățenie Generală</FooterParagraph>
+                      </Link>
+                    </ParagraphWrapper>
+                  </SectionWrapper>
+                </Col>
+                <Col lg={1} />
+                <Col lg={3}>
+                  <SectionWrapper>
+                    <FooterHeading>Contact</FooterHeading>
+                    <ParagraphWrapper>
+                      <FooterParagraph>0758460513</FooterParagraph>
+                      <FooterParagraph>neatpoint18@gmail.com</FooterParagraph>
+                    </ParagraphWrapper>
+                  </SectionWrapper>
+                </Col>
+              </Row>
+              <Row>
+                <Col lg={5} />
+                <Col lg={3}>
+                  <CopyrightWrapper>
+                    <ParagraphWrapper>
                       <FooterParagraph>
-                        Curățenie de întreținere
+                        © NeatPoint/ Brașov/ 2023
                       </FooterParagraph>
-                    </Link>
-                    <Link href="#curatenie-regim-hotelier">
-                      <FooterParagraph>
-                        Curățenie regim hotelier
-                      </FooterParagraph>
-                    </Link>
-                    <Link href="#curatenie-generala">
-                      <FooterParagraph>Curățenie Generală</FooterParagraph>
-                    </Link>
-                  </ParagraphWrapper>
-                </SectionWrapper>
-              </Col>
-              <Col lg={1} />
-              <Col lg={2}>
-                <SectionWrapper>
-                  <FooterHeading>Contact</FooterHeading>
-                  <ParagraphWrapper>
-                    <FooterParagraph>0758460513</FooterParagraph>
-                    <FooterParagraph>neatpoint18@gmail.com</FooterParagraph>
-                  </ParagraphWrapper>
-                </SectionWrapper>
-              </Col>
-            </Row>
-            <Row>
-              <Col lg={6} />
-              <Col lg={3}>
-                <ParagraphWrapper>
-                  <FooterParagraph>© NeatPoint/ Brașov/ 2023</FooterParagraph>
-                </ParagraphWrapper>
-              </Col>
-              <Col lg={1} />
-              <Col lg={2}>
-                <LegalWrapper>
-                  <LegalImage src="/footer/litigii.png" />
-                  <LegalImage src="/footer/solutionarea-alternativa-a-litigiilor.svg" />
-                </LegalWrapper>
-              </Col>
-            </Row>
-          </Container>
-        </Wrapper>
-      </BlockContent>
-    </Container>
+                    </ParagraphWrapper>
+                  </CopyrightWrapper>
+                </Col>
+                <Col lg={1} />
+                <Col lg={3}>
+                  <LegalWrapper>
+                    <LegalImage src="/footer/litigii.png" />
+                    <LegalImage src="/footer/solutionarea-alternativa-a-litigiilor.svg" />
+                  </LegalWrapper>
+                </Col>
+              </Row>
+            </Container>
+          </Wrapper>
+        </BlockContent>
+      </Container>
+    </BackgroundContainer>
   );
 };
 

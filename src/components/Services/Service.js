@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Row, Col } from "reactstrap";
 import MediaContent from "../common/MediaContent";
-import BlockHeader from "../common/BlockHeader";
+import BlockSubHeader from "../common/BlockSubHeader";
 import TextContent from "../common/TextContent";
 import Button from "../common/Button";
 import screens from "../Layout/mediaQueries";
@@ -14,6 +14,25 @@ const Wrapper = styled.div`
   @media only screen and (${screens.md}) {
     align-items: start;
     padding-bottom: 100px;
+  }
+`;
+
+const ServiceHeaderWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 10px;
+  @media only screen and (${screens.md}) {
+    gap: 16px;
+    align-items: start;
+  }
+`;
+
+const EllipsisWrapper = styled.span`
+  padding-top: 27px;
+  @media only screen and (${screens.md}) {
+    padding-top: 0;
+    margin-left: -60px;
   }
 `;
 
@@ -50,7 +69,12 @@ const Service = ({ header, source, children, flipped, id }) => {
           <Col lg={1} />
           <Col lg={5}>
             <TextContent>
-              <BlockHeader>{header}</BlockHeader>
+              <ServiceHeaderWrapper>
+                <EllipsisWrapper>
+                  <img src="/services/ellipsis.png" />
+                </EllipsisWrapper>
+                <BlockSubHeader>{header}</BlockSubHeader>
+              </ServiceHeaderWrapper>
               <ListWrapper>{children}</ListWrapper>
               <Link href="#contact">
                 <Button>Cere Oferta</Button>

@@ -4,6 +4,7 @@ import { Col, Row, Container } from "reactstrap";
 import Link from "../common/Link";
 
 const LogoWrapper = styled.div`
+  margin-bottom: 30px;
   height: 93px;
   text-align: center;
 `;

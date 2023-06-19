@@ -13,20 +13,22 @@ const FormContainer = styled.form`
 `;
 
 const Input = styled.input`
-  border: 1px solid #707070;
+  border: 1px solid #c2bebe;
   border-radius: 34px;
   display: block;
   width: 100%;
   text-align: center;
   padding: 10px;
+  background-color: #fafafa;
 `;
 
 const TextArea = styled.textarea`
-  border: 1px solid #707070;
+  border: 1px solid #c2bebe;
   border-radius: 34px;
   width: 100%;
   text-align: center;
   resize: none;
+  background-color: #fafafa;
 `;
 
 const Form = () => {
@@ -74,7 +76,7 @@ const Form = () => {
         required
       />
       <Input
-        type="number"
+        type="text"
         placeholder="Număr de telefon"
         name="user_phone"
         disabled={isLoading}

@@ -10,14 +10,16 @@ import screens from "../Layout/mediaQueries";
 import Link from "../common/Link";
 
 const Wrapper = styled.div`
-  background-image: url("/homePage/backgroundImage.svg");
+  background-image: url("/aboutPage/backgroundImage.svg");
   background-repeat: no-repeat;
-  background-position: 300% 50%;
+  background-size: cover;
   @media only screen and (${screens.md}) {
     background-position: 110% 50%;
+    background-size: fill;
   }
   @media only screen and (${screens.lg}) {
     background-position: 104% 50%;
+    background-size: 40%;
   }
 `;
 
@@ -54,7 +56,7 @@ const About = () => {
             <Col lg={7}>
               <MediaContent>
                 <Image
-                  src="/homePage/homePage-mobile.png"
+                  src="/aboutPage/homePage-mobile.png"
                   alt="home-page-image"
                 />
               </MediaContent>
