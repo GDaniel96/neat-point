@@ -33,7 +33,8 @@ const Contact = () => {
               <Wrapper>
                 <TextWrapper>
                   <BlockHeader>
-                    Scrie-ne un mesaj pentru a primi oferta adaptă nevoilor tale
+                    Scrie-ne un mesaj pentru a primi o oferta adaptată nevoilor
+                    tale
                   </BlockHeader>
                   <BlockParagraph>
                     Serviciile noastre se aplică doar în Județul Brașov
